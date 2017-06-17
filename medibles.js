@@ -7,41 +7,42 @@ $(document).ready(function() {
     	return Math.round(value * multiplier) / multiplier;
 	}
 
+	/* display on relevant element and remove uneeded ones from the DOM */
+
 	$('#grams').click(function(event){
-		$('#gramscalc').show();
+		$('#ec, #tds, #nd, #gobutton').show();
 	});
 
 	$('#perportion').click(function(event){
-		$('#dosecalc').show();
+		$('#aoc, #ec, #nd, #gobutton').show();
 	});
 
 	$('#howmany').click(function(event){
-		$('#portionscalc').show();
+		$('#aoc, #ec, #gobutton, #tds').show();
 	});
 
 	/* calculate the amount of cannabis needed for the recipe */
 
-	$('#gramscalc').on('submit', function(g) {
+	$('#medibles').on('submit', function(g) {
 		g.preventDefault();
-		var gpotency = parseInt($('input[name="gpercent"]').val()) / 100;
-		var gnumdoses = parseInt($('input[name="gdoses"]').val());
-		var gsize = parseInt($('input[name="gsize"]').val());
-		var gamount = ((gsize * gnumdoses) / gpotency) / 1000; 
-		console.log(round(gamount,1));
-	});
-
-	/* calculate the dosage per portion */
-
-	$('#dosescalc').on('submit', function(d) {
-		d.preventDefault();
-		var dpotency = parseInt($('input[name="dpercent"]').val()) / 100;
-		var dnumdoses = parseInt($('input[name="ddoses"]').val());
-		var damount =  parseInt($('input[name="dgrams"]').val());
-		var dsize = (damount * dpotency) / dnumdoses;  
-		console.log(round(dsize,0));
+		if ($('#aoc').css('display') == 'none') {
+			potency = parseInt($('input[name="percent"]').val()) / 100;
+			numdoses = parseInt($('input[name="doses"]').val());
+			size = parseInt($('input[name="size"]').val());
+			amount = ((size * numdoses) / potency) / 1000;
+			console.log(round(amount,1));
+		} else if ($('#tds').css('display') == 'none') {
+			potency = parseInt($('input[name="percent"]').val()) / 100;
+			numdoses = parseInt($('input[name="doses"]').val());
+			amount = parseInt($('input[name="grams"]').val()) * 1000;
+			size = (amount * potency) / numdoses;
+			console.log(round(size,1));
+		} else if ($('#nd').css('display') == 'none') {
+			potency = parseInt($('input[name="percent"]').val()) / 100;
+			size = parseInt($('input[name="size"]').val());
+			amount = parseInt($('input[name="grams"]').val()) * 1000;
+			numdoses = (amount * potency) / size;
+			console.log(round(numdoses,0));
+		}
 	});
 });
-
-
-	
-

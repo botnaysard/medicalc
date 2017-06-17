@@ -9,36 +9,20 @@
 	<title>Medible Calculator</title>
 </head>
 <body>
-<div id="whichcalc">
-	<h3>What describes your medible situation the best?</h3>
-	<div id="grams" class="question">1. I want to make a specific number of portions at a fixed dosage and don't know how much Cannabis I need</div>
-	<div id="perportion" class="question">2. I have some Cannabis and want to know what the dosage per portion will be.</div>
-	<div id="howmany" class="question">3. I have some Cannabis and want to know how many portions I can make at a specific dosage.</div>
-</div>
-<div id="formblock">
-	<form id="gramscalc" class="toggle">
-		Estimated Concentration (%) <input type="text" name="gpercent" id="gpercent"><br>
-		Target Dose Size (mg) <input type="text" name="gsize" id="gsize"><br>
-		# Doses <input type="text" name="gdoses" id="gdoses"><br>
-		<input type="submit" value="Go!">
-	</form>
-	
-	<!-- Cannot use mutliple forms per page easily.  Instead, hide sections of the form in undisplayed divs, and reveal the appropriate section when the selection is clicked in the list.  Use only one submit
-
-	<form id="dosecalc" class="toggle">
-		Amount of Cannabis (g) <input type="text" name="dgrams" id="dgrams"><br>
-		Estimated Concentration (%) <input type="text" name="dpercent" id="dpercent"><br>
-		# Doses <input type="text" name="ddoses" id="ddoses"><br>
-		<input type="submit" value="Go!">
-	</form>
-	<form id="portionscalc" class="toggle">
-		Amount of Cannabis (g) <input type="text" name="pgrams" id="pgrams"><br>
-		Estimated Concentration (%) <input type="text" name="ppercent" id="ppercent"><br>
-		Target Dose Size (mg) <input type="text" name="psize" id="psize"><br>
-		<input type="submit" value="Go!">
-	</form>
-
-	-->
+	<div id="whichcalc">
+		<h3>What describes your medible situation the best?</h3>
+		<div id="grams" class="question">1. I want to make a specific number of portions at a fixed dosage and don't know how much Cannabis I need</div>
+		<div id="perportion" class="question">2. I have some Cannabis and want to know what the dosage per portion will be.</div>
+		<div id="howmany" class="question">3. I have some Cannabis and want to know how many portions I can make at a specific dosage.</div>
+	</div>
+	<div id="formblock">
+		<form id="medibles">
+			<span class="toggle" id="aoc">Amount of Cannabis (g) <input type="text" name="grams" id="grams"></span><br>
+			<span class="toggle" id="ec">Estimated Concentration (%) <input type="text" name="percent" id="percent"></span><br>
+			<span class="toggle" id="tds">Target Dose Size (mg) <input type="text" name="size" id="size"></span><br>
+			<span class="toggle" id="nd"># Doses <input type="text" name="doses" id="doses"></span><br>
+			<span class="toggle" id="gobutton"><input type="submit" value="Go!"></span>
+		</form>
 	</div>
 </body>
 </html>

@@ -3,6 +3,11 @@
 	margin: 10px;
 }
 
+.question:hover {
+	cursor: pointer
+}
+
 .toggle {
 	display: none;
 }
+
