@@ -10,15 +10,19 @@ $(document).ready(function() {
 	/* display on relevant element and remove uneeded ones from the DOM */
 
 	$('#grams').click(function(event){
-		$('#ec, #tds, #nd, #gobutton').show();
+		$('#perportion, #howmany').fadeOut(function(event) {
+			$('#formblock, #ec, #tds, #nd, #gobutton').fadeIn();
+			$('#grams').removeClass('question').addClass('deadquestion');
+		});
+		
 	});
 
 	$('#perportion').click(function(event){
-		$('#aoc, #ec, #nd, #gobutton').show();
+		$('#formblock, #aoc, #ec, #nd, #gobutton').show();
 	});
 
 	$('#howmany').click(function(event){
-		$('#aoc, #ec, #gobutton, #tds').show();
+		$('#formblock, #aoc, #ec, #gobutton, #tds').show();
 	});
 
 	/* calculate the amount of cannabis needed for the recipe */

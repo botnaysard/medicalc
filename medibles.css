@@ -1,13 +1,86 @@
+body {
+	background-color: #ff5050;
+}
+
+h3 {
+	text-align: center;
+	font-size: 2.5em;
+	color: white;
+}
+
 .question {
-	border: 1px solid green;
 	margin: 10px;
+	width: 75%;
+	margin: 5px auto 30px auto;
+	padding: 10px;
+	font-size: 1.5em;
+	font-weight: lighter;
+	border: 1px solid #ffcccc;
+	color: #ffcccc;
+}
+
+.deadquestion {
+	margin: 10px;
+	width: 75%;
+	margin: 5px auto 30px auto;
+	padding: 10px;
+	font-size: 1.5em;
+	font-weight: lighter;
+	border: 1px solid transparent;
+	color: white;
 }
 
 .question:hover {
-	cursor: pointer
+	cursor: pointer;
+	border: 1px solid white;
+	color: white;
+	background-color: #ff1a1a;
 }
 
 .toggle {
 	display: none;
 }
+
+#instructions {
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	margin: 20px 0px;
+}
+
+#formblock {
+	width: 75%;
+	margin: 0px auto;
+	border: 1px solid white;
+}
+
+.formques {
+	margin: 5px 0 10px 0;
+}
+
+#medibles {
+	color: white;
+	width: 80%;
+	margin: 0px auto;
+	padding: 10px;
+	font-size: 1.5em;
+	font-weight: lighter;
+}
+
+input, textarea {
+	background-color: #ff5050;
+	color: white;
+	border: none;
+}	
+
+
+input[type=text] {
+	border-bottom: 1px solid white;
+	}
+
+#gobutton {
+	border: 1px solid white;
+	width: 52px;
+}
+
 

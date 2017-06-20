@@ -10,18 +10,21 @@
 </head>
 <body>
 	<div id="whichcalc">
-		<h3>What describes your medible situation the best?</h3>
-		<div id="grams" class="question">1. I want to make a specific number of portions at a fixed dosage and don't know how much Cannabis I need</div>
-		<div id="perportion" class="question">2. I have some Cannabis and want to know what the dosage per portion will be.</div>
-		<div id="howmany" class="question">3. I have some Cannabis and want to know how many portions I can make at a specific dosage.</div>
+		<h3>Q: What describes your medible situation the best?</h3>
+		<div id="grams" class="question">I want to make a specific number of portions at a fixed dosage and don't know how much Cannabis I need.</div>
+		<div id="perportion" class="question">I have some Cannabis to bake with and want to estimate the dosage per portion.</div>
+		<div id="howmany" class="question">I have some Cannabis and want to know how many portions I can make at a specific dosage.</div>
 	</div>
-	<div id="formblock">
+	<div id="formblock" class="toggle">
+		<div id="instructions">
+			OK!  Just complete the following staments and we'll sort you out!
+		</div>
 		<form id="medibles">
-			<span class="toggle" id="aoc">Amount of Cannabis (g) <input type="text" name="grams" id="grams"></span><br>
-			<span class="toggle" id="ec">Estimated Concentration (%) <input type="text" name="percent" id="percent"></span><br>
-			<span class="toggle" id="tds">Target Dose Size (mg) <input type="text" name="size" id="size"></span><br>
-			<span class="toggle" id="nd"># Doses <input type="text" name="doses" id="doses"></span><br>
-			<span class="toggle" id="gobutton"><input type="submit" value="Go!"></span>
+			<div class="toggle formques" id="aoc">I have <input type="text" name="grams" id="grams">g of Cannabis.</div>
+			<div class="toggle formques" id="ec">My Cannabis has about <input type="text" name="percent" id="percent">% THC.</div>
+			<div class="toggle formques" id="tds">I want each does to be <input type="text" name="size" id="size">mg.</div>
+			<div class="toggle formques" id="nd">I want to make <input type="text" name="doses" id="doses"> doses.</div>
+			<div class="toggle formques" id="gobutton"><input type="submit" value="Go!"></span>
 		</form>
 	</div>
 </body>
